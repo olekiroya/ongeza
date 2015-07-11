@@ -1,30 +1,22 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
-  <head>
-    <script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1','packages':
-
-['annotationchart']}]}"></script>
+   <head>
+   <!--Start of JavaScript -->
+    <script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1','packages':['annotationchart']}]}"></script>
     <script type='text/javascript'>
       google.load('visualization', '1', {'packages':['annotationchart']});
-          google.setOnLoadCallback(drawChart);
+      google.setOnLoadCallback(drawChart);
       function drawChart() {
-           var data = new google.visualization.DataTable();
-        data.addColumn('date', 'Date');
-        data.addColumn('number', 'USD Value is Constant');
-        data.addColumn('string', 'Kepler title');
-        data.addColumn('string', '');
-        data.addColumn('number', 'TSH Fluctuation Rate');
-        data.addColumn('string', 'Tsh Title');
-        data.addColumn('string', '');
-        for (var i = 1; i < 31; i++) {
-          var a = Math.round();
-          var b =Math.round( ( Math.random() * 500 ) );
-         data.addRows([
-            [new Date(2015, 5, i), a, "Exchange", "Rate", b, undefined, undefined],
+        var data = new google.visualization.DataTable();
+       data.addColumn('date', 'Date');
+       data.addColumn('number', 'Tsh Rate');
+       data.addColumn('number', 'USD rate is constant');
+      data.addRows([
+          
+          [new Date(2015,05,01), 1984, 1],[new Date(2015,05,02), 1984, 1],[new Date(2015,05,03), 2002, 1],[new Date(2015,05,04), 2168, 1],[new Date(2015,05,06), 2154, 1],[new Date(2015,05,10), 2130, 1],[new Date(2015,05,11), 2086, 1],[new Date(2015,05,12), 2086, 1],[new Date(2015,05,13), 2082, 1],[new Date(2015,05,14), 2086, 1],[new Date(2015,05,15), 2086, 1],[new Date(2015,05,16), 2086, 1],[new Date(2015,05,17), 2086, 1],[new Date(2015,05,18), 2086, 1],[new Date(2015,05,19), 2101, 1],[new Date(2015,05,20), 2073, 1],[new Date(2015,05,21), 2092, 1],[new Date(2015,05,22), 2087, 1],[new Date(2015,05,23), 1958, 1],[new Date(2015,05,24), 2009, 1],[new Date(2015,05,25), 2009, 1],[new Date(2015,05,26), 2053, 1],[new Date(2015,05,27), 2099, 1],[new Date(2015,05,28), 2076, 1],[new Date(2015,05,29), 2043, 1],[new Date(2015,05,30), 2000, 1]
           ]);
 
-        };
-
-        var chart = new google.visualization.AnnotationChart(document.getElementById('chart_div'));
+       var chart = new google.visualization.AnnotationChart(document.getElementById('chart_div'));
 
         var options = {
           displayAnnotations: true
@@ -32,11 +24,16 @@
 
         chart.draw(data, options);
       }
-
     </script>
+	<!--End of JavaScript -->
   </head>
-
+<!-- Html Body goes here-->
   <body>
-    <div id='chart_div' style='width: 1000px; height: 600px;'></div>
-  </body>
+  
+  
+    
+    <div id='chart_div' style='width: 900px; height: 500px;'></div>
+    
+  </body>  
+  <!-- End of HTML body -->
 </html>
